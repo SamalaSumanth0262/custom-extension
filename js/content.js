@@ -23,6 +23,10 @@ $(document).ready(function() {
       localStorage.setItem('listItems', $('#todo_list').html());
 
     });
+    //cloning the list
+    $(document).on('click','#add_button',function(){
+      $("#todo-box").clone().appendTo("body");
+    });
 
 });
 
