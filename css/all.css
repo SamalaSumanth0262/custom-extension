@@ -1,7 +1,6 @@
 .bg-color
 {
   background-color:#C5EA8F;
-
 }
 .rounding
 {
@@ -9,7 +8,7 @@
   background-color: aliceblue;
   box-shadow: 0 3px 4px rgba(0,0,0,0.24), 0 3px 6px rgba(0,0,0,0.12);
   font-size:1.5rem;
-
+  font-family: "Courier New";
 }
 #head-box
 {
@@ -18,11 +17,27 @@
 #todo-box{
   margin-top: 4rem;
 }
-.todo-rouding
-{
-  box-shadow: 0 1px 4px rgba(0,0,0,0.24), 0 2px 6px rgba(0,0,0,0.12);
-  border-radius:5rem;
-  margin:0.5rem;
-  font-size:1rem;
+.todo-rouding {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.12);
+  border-radius: 5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
   list-style-type: none;
+  padding-left: 1rem;
+  padding-right:1rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Courier New";
+}
+#remove{
+  float:right;
+  cursor: pointer;
+}
+#completed{
+  float:left;
+  cursor: pointer;
+  color:forestgreen;
+}
+.fa-trash-alt{
+  color:red;
 }

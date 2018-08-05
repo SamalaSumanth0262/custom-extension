@@ -1,14 +1,35 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//   document.getElementById("click-this").addEventListener("click", handler);
-// });
-//
-// // The handler also must go in a .js file
-// function handler() {
-//   /* ... */
-//   console.log("this is sumanth");
-// }
 $(document).ready(function() {
-  $("#click-this").click(function () {
-    $("#todo_list").append("<li class='todo-rouding'>sumnth</li>");
-  });
+    $("#todo_list").html(localStorage.getItem('listItems'));
+    $('.add_items').submit(function(event){
+      event.preventDefault();
+      var item = $("#todo_list_item").val();
+
+      if(item)
+      {
+        $("#todo_list").append("<li class='todo-rouding'>"+item+"<a id='completed'><i class=\"fas fa-check\"></i>\n" +
+          "\n</a><a id='remove'><i class=\"far fa-trash-alt\"></i>\n" + "\n</a></li>");
+        localStorage.setItem('listItems',$('#todo_list').html());
+        $("#todo_list_item").val("");
+      }
+
+    });
+    $(document).on('click', '#completed', function(){
+      $(this).parent().css("text-decoration","line-through");
+      localStorage.setItem('listItems', $('#todo_list').html());
+    });
+    // REMOVE JUQERY
+    $(document).on('click', '#remove', function(){
+      $(this).parent().remove();
+      localStorage.setItem('listItems', $('#todo_list').html());
+
+    });
+
 });
+
+
+
+
+
+
+
+
