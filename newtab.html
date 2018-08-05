@@ -6,9 +6,27 @@
 
 </head>
 <body class="container bg-color">
+    <div class="row" style="text-align: center;">
+      <div class="col-md-4 mx-auto">
+        <div id="app"></div>
 
+        <script id="dob-template" type="text/x-handlebars-template">
+          <form>
+            <h5 id="dob" class="age-label">When were you born?</h5>
+            <footer class="form-control-sm">
+              <input type="date" name="dob" id="dob" style="border-radius:3rem;">
+              <button class="btn btn-sm btn-outline-success" type="submit" style="border-radius:3rem;">Motivate Me</button>
+            </footer>
+            <form>
+        </script>
+
+        <script id="age-template" type="text/x-handlebars-template">
+          <h2 class="count">{{year}}<sup>.{{milliseconds}}</sup></h3><p>Damn!!!!! im already {{year}}!!!Lets finish this off!!</p>
+        </script>
+      </div>
+    </div>
       <div class="row" id="head-box" style="text-align: center;">
-        <div class="col-md-3   mx-auto rounding">
+        <div class="col-md-3 mx-auto rounding">
           <strong>Make Your List</strong>
         </div>
       </div>
@@ -20,11 +38,14 @@
           </form>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <a class="btn btn-light" id="add_button"><i class="fas fa-plus"></i></a>
-        </div>
-      </div>
+
+<!--Cloned git-->
+
+
+      <script src="js/handlebars.js"></script>
+      <script src="app/app.js"></script>
+
+
 
 
 
